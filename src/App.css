@@ -2,37 +2,71 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.contentBox{
+  height: 100%;
+    width: 65%;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin:50px auto;
+    overflow: hidden;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoForm{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column;      
+}
+input, textarea, button{
+  padding: 10px;
+  margin: 10px 0px;
+  font-size: 1.1rem;
+}
+textarea{
+  min-height: 150px;
+  max-height: 150px;
+  max-width: 97%;
+  min-width: 97%;  
+}
+button{
+  cursor: pointer;
+  border: none; 
+  letter-spacing: 2px; 
+  outline: none;
+}
+button:hover{
+  background-color: lightseagreen;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.2);
+  transition: linear all .2s;
+}
+
+/* Task */
+
+.taskContainer{
+  display: flex;
+  align-items: center;  
+}
+.taskContentBox{
+  width: 100%;
+  text-align: left;
+}
+.taskContentBox span{
+  color: rgba(0, 0, 0, 0.4);
+}
+.taskContainer button{
+  border-radius: 100%;
+  width: 30px ;
+  height: 30px;   
+  display: flex;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: crimson;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taskContainer button:hover{
+  background-color: red;
 }
