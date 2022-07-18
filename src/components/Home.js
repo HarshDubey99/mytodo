@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Task from "./Task";
-
+import logo from "../assets/logo.png";
 const Home = () => {
   const initialTasks = localStorage.getItem("tasks")
     ? JSON.parse(localStorage.getItem("tasks"))
@@ -35,6 +35,7 @@ const Home = () => {
   return (
     <div className="mainContainer">
       <div className="contentBox">
+        <img src={logo} alt="logo" id="logo" />
         <h1>My Todo</h1>
         <h5>Complete Your Daily Todo List </h5>
         <form className="todoForm" onSubmit={handleSubmit}>
